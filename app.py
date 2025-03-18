@@ -4,7 +4,7 @@ import plotly.express as px
 
 
 def cargar_datos():
-        df = pd.read_csv(r"C:\Users\josep\Downloads\vehicles_us.csv")
+        df = pd.read_csv("data/vehicles_us.csv")
         df["model_year"].fillna(df["model_year"].median(), inplace=True)
         df["model_year"]= df["model_year"].astype("int")
         df["cylinders"].fillna(df["cylinders"].median(), inplace=True)
